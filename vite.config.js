@@ -9,6 +9,7 @@ export default defineConfig({
     allowedHosts: [cloudRunHost],
   },
   preview: {
-    allowedHosts: [cloudRunHost],
+    // Cloud Run hostnames can vary per revision; allow all preview hosts.
+    allowedHosts: true,
   },
 });
